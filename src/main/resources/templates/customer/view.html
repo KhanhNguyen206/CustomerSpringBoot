@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Test</title>
 </head>
 <body>
-
+<div>
+    <a th:href="@{/}">Home</a>
+    <a th:href="@{/customers}">Customer</a>
+</div>
+<div>
+    <div>
+        <label>First Name: </label>
+        <label th:text="${customer.getFirstName()}"></label>
+    </div>
+    <div>
+        <label>Last Name: </label>
+        <label th:text="${customer.getLastName()}"></label>
+    </div>
+    <div>
+        <label>Phone Number: </label>
+        <label th:text="${customer.getPhoneNumber()}"></label>
+    </div>
+    <div>
+        <label>Email: </label>
+        <label th:text="${customer.getEmail()}"></label>
+    </div>
+    <div>
+        <label>Province: </label>
+        <label th:text="${customer.getProvince().getName()}"></label>
+    </div>
+</div>
 </body>
 </html>
